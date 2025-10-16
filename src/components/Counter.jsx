@@ -1,23 +1,42 @@
-import React,{use, useState} from "react";
+import React, { useState } from 'react';
 
 const Counter = () => {
-    const [cnt,setCnt] = useState(0);
-    const [fac,setFac] = useState(1);
-    function increaseCount() {
-        setCnt(cnt + fac);
-    }
-    function decreaseCount() {
-        setCnt(cnt - fac);
-    }
-    return (
-        <>
-        <h2>Counter = {cnt}</h2>
-        <button onClick={increaseCount}>Increment</button>
-        <button onClick={decreaseCount}>Decrement</button>
-        <h1>Set my factor {fac}</h1>
-        <input type="number" value={fac} onChange={(e) => setFac(Number(e.target.value))} />
-        
-        </>
-    )
-}
+  // State using useState hook
+  const [count, setCount] = useState(0);
+  const [tags, setTags] = useState(['tag1', 'tag2', 'tag3']);
+
+  // Handle increment
+  const handleIncrement = () => {
+    alert('button clicked!');
+    setCount(count + 1); // update state properly
+  };
+
+  // Dynamic classes for count badge
+  const getBadgeClasses = () => {
+    let classes = "badge m-2 badge-";
+    classes += count === 0 ? "warning" : "primary";
+    return classes;
+  };
+
+  // Format count display
+  const formatCount = () => {
+    return count === 0 ? "Zero" : count;
+  };
+
+  // Render tags
+  const renderTags = () => {
+    if (tags.length === 0) return <p>There is no tags!</p>;
+    return <ul>{tags.map(tg => <li key={tg}>{tg}</li>)}</ul>;
+  };
+
+  return (
+    <>
+      <span className={getBadgeClasses()}>{formatCount()}</span>
+      <button onClick={handleIncrement} className="btn btn-secondary btn-sm">Increment</button>
+      {tags.length === 0 && "Please create a new tag!"}
+      {renderTags()}
+    </>
+  );
+};
+
 export default Counter;

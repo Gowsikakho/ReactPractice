@@ -12,9 +12,10 @@ function App() {
 
   return (
     <>
-      <Hello name="Gowsi"/> 
+      {/*<Hello name="Gowsi"/> 
       <Message />
-      <Form />
+      <Form />*/}
+      <Counter />
     </>
   )
 }
