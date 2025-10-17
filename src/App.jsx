@@ -4,7 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Hello from './components/Hello.jsx';
 import Message from './components/Message.jsx';
-import Counter from './components/Counter.jsx';
+import Counters from './components/counters.jsx';
 import Form from './components/Form.jsx';
 import Movies from './components/movies.jsx';
 
@@ -17,7 +17,7 @@ function App() {
       <Message />
       <Form />*/}
       <Movies />
-      <Counter />
+      <Counters />
     </>
   )
 }
