@@ -6,6 +6,7 @@ import Hello from './components/Hello.jsx';
 import Message from './components/Message.jsx';
 import Counter from './components/Counter.jsx';
 import Form from './components/Form.jsx';
+import Movies from './components/movies.jsx';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -15,6 +16,7 @@ function App() {
       {/*<Hello name="Gowsi"/> 
       <Message />
       <Form />*/}
+      <Movies />
       <Counter />
     </>
   )
