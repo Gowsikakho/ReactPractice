@@ -20,8 +20,9 @@ function App() {
       <Form />
       <Movies />
       <Counters />*/}
-      <MainContent />
       <Navbar />
+      <MainContent />
+      
     </>
   )
 }

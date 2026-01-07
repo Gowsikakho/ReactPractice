@@ -1,6 +1,12 @@
+import react from '../assets/react.svg';
 function Navbar(){
     return(
-        <h1>Navbar</h1>
+        <header>
+            <nav>
+                <img src={react} alt="React Logo" />
+                <h1>React</h1>
+            </nav>
+        </header>
     )
 }
 
