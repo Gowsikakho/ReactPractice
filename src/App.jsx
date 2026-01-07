@@ -7,6 +7,8 @@ import Message from './components/Message.jsx';
 import Counters from './components/counters.jsx';
 import Form from './components/Form.jsx';
 import Movies from './components/movies.jsx';
+import Navbar from './components/Navbar.jsx';
+import MainContent from './components/MainContent.jsx';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -15,9 +17,11 @@ function App() {
     <>
       {/*<Hello name="Gowsi"/> 
       <Message />
-      <Form />*/}
+      <Form />
       <Movies />
-      <Counters />
+      <Counters />*/}
+      <MainContent />
+      <Navbar />
     </>
   )
 }
