@@ -1,42 +1,74 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.nav {
+  background: #F55A5A;
+  color: white;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.nav img {
+  height: 24px;
+  margin-right: 7px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav h1 {
+  font-size: 14.5px;
+  font-weight: 500;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+/* CARD */
+
+.cards-list {
+  padding: 40px;
 }
 
 .card {
-  padding: 2em;
+  display: flex;
+  margin-bottom: 36px;
 }
 
-.read-the-docs {
-  color: #888;
+.card-image {
+  width: 125px;
+  height: 168px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding-left: 20px;
+}
+
+.card-location {
+  display: flex;
+  align-items: center;
+  font-size: 10px;
+  margin-bottom: 7px;
+}
+
+.card-location a {
+  margin-left: 12px;
+  color: #918E9B;
+  text-decoration: underline;
+}
+
+.country {
+  letter-spacing: 0.17em;
+  margin-left: 4px;
+}
+
+.card h2 {
+  font-size: 25px;
+  margin-bottom: 14px;
+}
+
+.date {
+  font-size: 10px;
+  font-weight: bold;
+  margin-bottom: 9px;
+}
+
+.description {
+  font-size: 10px;
+  line-height: 150%;
 }

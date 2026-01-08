@@ -1,30 +1,24 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import Hello from './components/Hello.jsx';
-import Message from './components/Message.jsx';
-import Counters from './components/counters.jsx';
-import Form from './components/Form.jsx';
-import Movies from './components/movies.jsx';
-import Navbar from './components/Navbar.jsx';
-import MainContent from './components/MainContent.jsx';
+import Nav from "./components/Nav";
+import Card from "./components/Card";
+import data from "./data";
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const cards = data.map(item => (
+    <Card
+      key={item.id}
+      {...item}
+    />
+  ));
 
   return (
-    <>
-      {/*<Hello name="Gowsi"/> 
-      <Message />
-      <Form />
-      <Movies />
-      <Counters />*/}
-      <Navbar />
-      <MainContent />
-      
-    </>
-  )
+    <div className="app">
+      <Nav />
+      <section className="cards-list">
+        {cards}
+      </section>
+    </div>
+  );
 }
 
-export default App
+export default App;
