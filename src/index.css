@@ -1,86 +1,69 @@
-html, body {
-    margin: 0;
+img {
+  max-width: 100%;
+  height: auto;
 }
 
-body {
-    font-family: Inter;
-}
+nav{
+  background: #F55A5A;
+  width: 140;
+  height: 24;
+  angle: 0 deg;
+  opacity: 1;
+  top: 16px;
+  left: 213px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  justify-content: center;
+  color:white;
+  margin-bottom: 20px;
 
-.container {
-    margin: 45px 40px;
 }
-
-header {
-    background: #F55A5A;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    height: 55px;
+nav h1{
+  color: #ffff;
+  margin-left:10px;
+  font-weight: 500;
+  font-size: 14.4px;
+  font-family: 'Inter', sans-serif;
 }
-
-header > img {
-    width: 24px;
-    margin-right: 7px;
-}
-
-header > h1 {
-    font-size: 0.9rem;
-    font-weight: 500;
-}
-
 article.journal-entry {
-    display: flex;
+  display: flex;
+  gap: 20px;
 }
 
-article.journal-entry .marker {
-    width: 7px;
-    margin-right: 4px;
+.main-image-container {
+  width: 200px;
+  height: 280px;
+  overflow: hidden;
+  border-radius: 8px;
 }
 
-article.journal-entry .main-image-container {
-    width: 125px;
-    height: 168px;
-    overflow: hidden;
-    border-radius: 5px;
-    flex-shrink: 0;
-    margin-right: 19px;
+.entry-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-article.journal-entry .main-image {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
+.location {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  
 }
 
-.info-container span.country {
-    text-transform: uppercase;
-    font-size: 0.7rem;
-    margin-right: 12px;
-}
+.main-image{
+  width: 550;
+height: 704;
+angle: 0 deg;
+opacity: 1;
 
-.info-container a {
-    color: #2B283A;
-    font-size: 0.7rem;
 }
+.trip-dates{
+  width: 319;
+height: 11;
+angle: 0 deg;
+opacity: 1;
+top: 183px;
+left: 184px;
 
-.info-container a:visited {
-    color: #918E9B;
-}
-
-.info-container h2.entry-title {
-    margin-top: 7px;
-    margin-bottom: 17px;
-}
-
-.info-container p.trip-dates {
-    font-weight: bold;
-}
-
-.info-container p.entry-text {
-    line-height: 1.5;
-    font-size: 0.8rem;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;  
-    overflow: hidden;
 }

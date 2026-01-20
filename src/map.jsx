@@ -1,5 +1,5 @@
-import Entry from "./entry"
-import EntryData from "./EntryData"
+import Joke from "./Joke"
+import jokesData from "./jokesData"
 
 export default function App() {
     
@@ -8,25 +8,13 @@ export default function App() {
      * Joke component in the .map() (and render the jokeElements array) so 
      * the jokes show up on the page again
      */
-
-    const samples= EntryData.map((val) => {
-    return (
-      <Entry
-          key={val.id}
-          name={val.name}
-          img={val.img}
-          country={val.country}
-          googleMapsUrl={val.googleMapsUrl}
-          dates={val.dates}
-          text={val.text}
-
-        />
-    )
-})
-
+    
+    const jokeElements = jokesData.map((joke) => {
+        return <Joke  />
+    })
     return (
         <main>
-            {samples}
+            
         </main>
     )
 }
