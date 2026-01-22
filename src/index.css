@@ -1,69 +1,60 @@
-img {
-  max-width: 100%;
-  height: auto;
+* {
+    box-sizing: border-box;
 }
 
-nav{
-  background: #F55A5A;
-  width: 140;
-  height: 24;
-  angle: 0 deg;
-  opacity: 1;
-  top: 16px;
-  left: 213px;
-  display: flex;
-  align-items: center;
-  padding: 10px;
-  justify-content: center;
-  color:white;
-  margin-bottom: 20px;
-
-}
-nav h1{
-  color: #ffff;
-  margin-left:10px;
-  font-weight: 500;
-  font-size: 14.4px;
-  font-family: 'Inter', sans-serif;
-}
-article.journal-entry {
-  display: flex;
-  gap: 20px;
+body {
+    background-color: #0C4A6E;
+    margin: 0;
+    font-family: "Inter", sans-serif;
 }
 
-.main-image-container {
-  width: 200px;
-  height: 280px;
-  overflow: hidden;
-  border-radius: 8px;
+main {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.entry-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.card {
+    background-color: white;
+    width: 200px;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    height: 350px;
 }
 
-.location {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  
+.card .avatar {
+    width: 100%;
+    padding: 10%;
+    padding-bottom: 0;
 }
 
-.main-image{
-  width: 550;
-height: 704;
-angle: 0 deg;
-opacity: 1;
-
+.card .name {
+    margin-block: 13px;
+    color: #333333;
 }
-.trip-dates{
-  width: 319;
-height: 11;
-angle: 0 deg;
-opacity: 1;
-top: 183px;
-left: 184px;
 
+.card .info {
+    padding: 10px;
+}
+
+.card .favorite {
+    width: 25px;
+    cursor: pointer;
+}
+
+.card .contact {
+    font-size: 0.75rem;
+    color: gray;
+    margin-block: 7px;
+}
+
+.card .favorite-button {
+    border: none;
+    background: transparent;
+}
+
+.card .favorite-button:active {
+    transform: none;
+    box-shadow: none;
 }

@@ -1,74 +1,60 @@
-.nav {
-  background: #F55A5A;
-  color: white;
-  height: 70px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+* {
+    box-sizing: border-box;
 }
 
-.nav img {
-  height: 24px;
-  margin-right: 7px;
+body {
+    background-color: #0C4A6E;
+    margin: 0;
+    font-family: "Inter", sans-serif;
 }
 
-.nav h1 {
-  font-size: 14.5px;
-  font-weight: 500;
-}
-
-/* CARD */
-
-.cards-list {
-  padding: 40px;
+main {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .card {
-  display: flex;
-  margin-bottom: 36px;
+    background-color: white;
+    width: 200px;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    height: 350px;
 }
 
-.card-image {
-  width: 125px;
-  height: 168px;
-  border-radius: 5px;
-  object-fit: cover;
+.card .avatar {
+    width: 100%;
+    padding: 10%;
+    padding-bottom: 0;
 }
 
-.card-content {
-  padding-left: 20px;
+.card .name {
+    margin-block: 13px;
+    color: #333333;
 }
 
-.card-location {
-  display: flex;
-  align-items: center;
-  font-size: 10px;
-  margin-bottom: 7px;
+.card .info {
+    padding: 10px;
 }
 
-.card-location a {
-  margin-left: 12px;
-  color: #918E9B;
-  text-decoration: underline;
+.card .favorite {
+    width: 25px;
+    cursor: pointer;
 }
 
-.country {
-  letter-spacing: 0.17em;
-  margin-left: 4px;
+.card .contact {
+    font-size: 0.75rem;
+    color: gray;
+    margin-block: 7px;
 }
 
-.card h2 {
-  font-size: 25px;
-  margin-bottom: 14px;
+.card .favorite-button {
+    border: none;
+    background: transparent;
 }
 
-.date {
-  font-size: 10px;
-  font-weight: bold;
-  margin-bottom: 9px;
-}
-
-.description {
-  font-size: 10px;
-  line-height: 150%;
+.card .favorite-button:active {
+    transform: none;
+    box-shadow: none;
 }

@@ -1,52 +1,66 @@
-import Entry from "./entry"
-import EntryData from "./EntryData"
+import React from "react"
+import avatar from "./assets/images/user.png"
+import starFilled from "./assets/images/star-filled.png"
+import starEmpty from "./assets/images/star-empty.png"
 
 export default function App() {
+    const [contact, setContact] = React.useState({
+        firstName: "John",
+        lastName: "Doe",
+        phone: "+1 (212) 555-1212",
+        email: "itsmyrealname@example.com",
+        isFavorite: true
+    })
+    
+    let starIcon = contact.isFavorite ? starFilled : starEmpty
+
+    function toggleFavorite() {
+        setContact(prevContact => {
+            return {
+                ...prevContact,
+                isFavorite: !prevContact.isFavorite
+            }
+        })
+    }
     
     /**
-     * Challenge: See if you can correctly pass the necessary props to the 
-     * Joke component in the .map() (and render the jokeElements array) so 
-     * the jokes show up on the page again
+     * Challenge:
+     * Update the following:
+     * - aria-pressed should reflect the same value as contact.isFavorite.
+     * - aria-label should switch to say "Remove from favorites" if
+     *   contact.isFavorite is `true`.
+     * - img alt should say "filled star icon" when it is filled.
      */
-
-    const samples= EntryData.map((val) => {
-    return (
-      <Entry
-          key={val.id}
-          name={val.name}
-          img={val.img}
-          country={val.country}
-          googleMapsUrl={val.googleMapsUrl}
-          dates={val.dates}
-          text={val.text}
-
-        />
-    )
-})
 
     return (
         <main>
-            {samples}
+            <article className="card">
+                <img
+                    src={avatar}
+                    className="avatar"
+                    alt="User profile picture of John Doe"
+                />
+                <div className="info">
+                    <button
+                        onClick={toggleFavorite}
+                        aria-pressed={false}
+                        aria-label="Add to favorites"
+                        className="favorite-button"
+                    >
+                        <img
+                            src={starIcon}
+                            alt="empty star icon"
+                            className="favorite"
+                        />
+                    </button>
+                    <h2 className="name">
+                        {contact.firstName} {contact.lastName}
+                    </h2>
+                    <p className="contact">{contact.phone}</p>
+                    <p className="contact">{contact.email}</p>
+                </div>
+
+            </article>
         </main>
     )
 }
-
-// <Joke
-//     punchline="It's hard to explain puns to kleptomaniacs because they always take things literally."
-// />
-// <Joke
-//     setup="How did the hacker escape the police?"
-//     punchline="He just ransomware!"
-// />
-// <Joke
-//     setup="Why don't pirates travel on mountain roads?"
-//     punchline="Scurvy."
-// />
-// <Joke
-//     setup="Why do bees stay in the hive in the winter?"
-//     punchline="Swarm."
-// />
-// <Joke
-//     setup="What's the best thing about Switzerland?"
-//     punchline="I don't know, but the flag is a big plus!"
-// />
