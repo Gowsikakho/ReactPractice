@@ -1,19 +1,12 @@
-import Joke from "./jokes.jsx"
-import jokesData from "./JokeData.jsx"
+import React from "react"
+import Header from "./components/Header"
+import Body from "./components/Body"
 
 export default function App() {
-    const jokeElements = jokesData.map(joke => {
-        return (
-            <Joke 
-                key={joke.id}
-                setup={joke.setup} 
-                punchline={joke.punchline} 
-            />
-        )
-    })
     return (
-        <div>
-            {jokeElements}
-        </div>
+        <main>
+            <Header />
+            <Body />
+        </main>
     )
 }
